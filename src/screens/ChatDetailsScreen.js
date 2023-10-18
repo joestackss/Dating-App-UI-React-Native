@@ -7,25 +7,30 @@ import {
   TextInput,
   Image,
   TouchableOpacity,
+  Platform,
 } from "react-native";
 import {
   ChevronLeftIcon,
   FaceSmileIcon,
   PaperAirplaneIcon,
-  PaperClipIcon,
   PhotoIcon,
 } from "react-native-heroicons/outline";
 import { EllipsisHorizontalIcon } from "react-native-heroicons/solid";
 import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+const android = Platform.OS === "android";
+
 export default function ChatDetailsScreen({ route }) {
   const navigation = useNavigation();
   const { chat, imgUrl, name, age } = route.params;
-  // console.log(chat.sender);
 
   return (
-    <SafeAreaView className=" justify-center items-center relative bg-white">
+    <SafeAreaView className=" justify-center items-center relative bg-white"
+    style={{
+      paddingTop: android ? hp(4) : 0,
+    }}
+    >
       {/* Header */}
       <View className="justify-between items-center flex-row w-full px-4 pb-2 border-b border-neutral-400">
         {/* Arrow */}

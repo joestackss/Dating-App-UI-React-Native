@@ -12,15 +12,21 @@ import Matches from "../components/matches";
 import { MagnifyingGlassIcon } from "react-native-heroicons/outline";
 import {
   heightPercentageToDP as hp,
-  widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import { chatData } from "../constant";
 import { useNavigation } from "@react-navigation/native";
 
+const android = Platform.OS === "android";
+
 export default function ChatScreen() {
   const navigation = useNavigation();
   return (
-    <SafeAreaView className="">
+    <SafeAreaView
+      className=""
+      style={{
+        paddingTop: android ? hp(3) : 0,
+      }}
+    >
       <View className="px-4">
         <Text className="uppercase font-semibold text-neutral-500 tracking-wider">
           Matches
@@ -58,43 +64,60 @@ export default function ChatScreen() {
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => (
             <TouchableOpacity
-              className="w-full py-3 items-center flex-row border-b  border-neutral-300 "
+              className="w-full py-3 items-center flex-row border-b  border-neutral-300"
               onPress={() =>
                 navigation.navigate("ChatDetails", {
                   chat: item.chat,
                   imgUrl: item.imgUrl,
                   name: item.name,
-                  age : item.age
+                  age: item.age,
                 })
               }
             >
               {/* Avatar */}
-              <View className="w-[17%]">
+              <View
+                className="w-[17%] justify-center"
+                style={{
+                  width: hp(7),
+                  height: hp(7),
+                }}
+              >
                 <Image
                   source={item.imgUrl}
                   style={{
-                    width: hp(6),
-                    height: hp(6),
+                    width: "90%",
+                    height: "90%",
                   }}
                   className="rounded-full"
                 />
               </View>
 
               {/* Information */}
-              <View className="w-[82%]  space-y-1">
+              <View
+                className="w-[82%]"
+                style={{
+                  height: hp(6),
+                }}
+              >
                 <View className="flex-row justify-between items-center">
                   <View className="flex-row justify-center">
-                    <Text className="font-bold text-base leading-[0px]">
-                      {item.name} {", "}
-                    </Text>
-                    <Text className="font-bold text-base leading-[0px] mr-1">
-                      {item.age}
-                    </Text>
+                    <View className="flex-row">
+                      <Text className="font-bold text-base  ">
+                        {item.name} {", "}
+                      </Text>
+                      <Text className="font-bold text-base mr-1">
+                        {item.age}
+                      </Text>
+                    </View>
                     {item.isOnline && (
-                      <View className="w-2 h-2 bg-[#F26322] rounded-full ml-1 mt-1"></View>
+                      <View className=" justify-center items-center">
+                        <View className="w-2 h-2 bg-[#F26322] rounded-full ml-1 justify-center items-center"></View>
+                      </View>
                     )}
                   </View>
-                  <Text className="text-sm leading-[0px]">{item.timeSent}</Text>
+                  <Text className="text-sm tracking-tight">
+                    {item.timeSent}
+                  </Text>
                 </View>
                 <View>
                   <Text className="font-semibold text-xs text-neutral-500">

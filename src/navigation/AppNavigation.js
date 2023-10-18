@@ -1,11 +1,9 @@
-import { View, Text } from "react-native";
 import React from "react";
 import WelcomeScreen from "../screens/WelcomeScreen";
 import HomeScreen from "../screens/HomeScreen";
 import ChatScreen from "../screens/ChatScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import ChatDetailsScreen from "../screens/ChatDetailsScreen";
-import SavedScreen from "../screens/SavedScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
@@ -58,7 +56,7 @@ export default function AppNavigation() {
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Matches" component={SavedScreen} />
+
         <Tab.Screen name="Chat" component={ChatScreen} />
         <Tab.Screen name="Profile" component={ProfileScreen} />
       </Tab.Navigator>

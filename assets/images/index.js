@@ -7,5 +7,17 @@ import user6 from "./user6.jpg";
 import user7 from "./user7.jpg";
 import user8 from "./user8.jpg";
 import user9 from "./user9.jpg";
+import profile from "./profile.jpg";
 
-export { user1, user2, user3, user4, user5, user6, user7, user8, user9 };
+export {
+  user1,
+  user2,
+  user3,
+  user4,
+  user5,
+  user6,
+  user7,
+  user8,
+  user9,
+  profile,
+};

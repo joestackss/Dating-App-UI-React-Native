@@ -1,4 +1,5 @@
 import {
+  profile,
   user1,
   user2,
   user3,
@@ -98,7 +99,7 @@ export const chatData = [
   {
     id: 1,
     name: "Betty",
-    imgUrl: user4,
+    imgUrl: user1,
     age: 32,
     isOnline: true,
     lastMessage:
@@ -116,12 +117,32 @@ export const chatData = [
         message: "I am doing great, thanks!",
         timestamp: "10:05 AM",
       },
+      {
+        sender: "me",
+        message: "Have any exciting plans for the weekend? 😊",
+        timestamp: "10:10 AM",
+      },
+      {
+        sender: "Betty",
+        message: "Yes, I'm thinking of going hiking. 🏞️ What about you?",
+        timestamp: "10:15 AM",
+      },
+      {
+        sender: "me",
+        message: "That sounds amazing! I might just tag along. 🥾",
+        timestamp: "10:20 AM",
+      },
+      {
+        sender: "Betty",
+        message: "That would be great! The more, the merrier. 🌟",
+        timestamp: "10:25 AM",
+      },
     ],
   },
   {
     id: 2,
-    name: "Charlie",
-    imgUrl: user5,
+    name: "Basquit",
+    imgUrl: user2,
     age: 28,
     isOnline: false,
     lastMessage: "Sure, let's do that. When are you free?",
@@ -138,13 +159,47 @@ export const chatData = [
         message: "I've been good. How about you?",
         timestamp: "11:05 AM",
       },
+      {
+        sender: "me",
+        message: "I've been a bit busy, but managing. 😊",
+        timestamp: "11:10 AM",
+      },
+      {
+        sender: "Charlie",
+        message: "I understand. We should catch up soon! ☕",
+        timestamp: "11:15 AM",
+      },
+      {
+        sender: "me",
+        message: "Definitely! Let's plan something for this weekend. 🎉",
+        timestamp: "11:20 AM",
+      },
+      {
+        sender: "Charlie",
+        message: "Sure, that sounds good. When are you free? 🗓️",
+        timestamp: "11:25 AM",
+      },
+      {
+        sender: "me",
+        message: "I'm free on Saturday afternoon. How about you? 🌤️",
+        timestamp: "11:30 AM",
+      },
+      {
+        sender: "Charlie",
+        message: "Saturday works for me too! Let's meet at our usual spot. 🍔",
+        timestamp: "11:35 AM",
+      },
+      {
+        sender: "me",
+        message: "Sounds like a plan! See you then. 👋",
+        timestamp: "11:40 AM",
+      },
     ],
   },
-  // Additional entries:
   {
     id: 3,
     name: "Oliver",
-    imgUrl: user8,
+    imgUrl: user3,
     age: 30,
     isOnline: true,
     lastMessage: "Sounds like a plan! Let's make it happen.",
@@ -160,6 +215,37 @@ export const chatData = [
         sender: "Oliver",
         message: "It's going great! Enjoying the sunshine. How about you?",
         timestamp: "2:05 PM",
+      },
+      {
+        sender: "me",
+        message: "That's wonderful! I'm just getting through some work. 💻",
+        timestamp: "2:10 PM",
+      },
+      {
+        sender: "Oliver",
+        message: "Don't work too hard! Make sure to take breaks. 🌞",
+        timestamp: "2:15 PM",
+      },
+      {
+        sender: "me",
+        message:
+          "Absolutely, breaks are necessary. Planning anything fun for the evening? 🎉",
+        timestamp: "2:20 PM",
+      },
+      {
+        sender: "Oliver",
+        message: "I might go to the gym later. Need to work off some steam. 💪",
+        timestamp: "2:25 PM",
+      },
+      {
+        sender: "me",
+        message: "That's a great idea! I should join you sometime. 🏋️‍♂️",
+        timestamp: "2:30 PM",
+      },
+      {
+        sender: "Oliver",
+        message: "Definitely! The more, the merrier. 🤸‍♂️",
+        timestamp: "2:35 PM",
       },
     ],
   },
@@ -198,30 +284,6 @@ export const chatData = [
         sender: "Sophie",
         message: "That's good to hear. Any exciting plans for the weekend?",
         timestamp: "3:15 PM",
-      },
-      {
-        sender: "me",
-        message:
-          "Not yet, but I'm thinking of checking out that new restaurant downtown. You?",
-        timestamp: "3:20 PM",
-      },
-      {
-        sender: "Sophie",
-        message:
-          "I'm planning to go hiking with some friends. You should join us sometime!",
-        timestamp: "3:25 PM",
-      },
-      {
-        sender: "me",
-        message:
-          "Not yet, but I'm thinking of checking out that new restaurant downtown. You?",
-        timestamp: "3:20 PM",
-      },
-      {
-        sender: "Sophie",
-        message:
-          "I'm planning to go hiking with some friends. You should join us sometime!",
-        timestamp: "3:25 PM",
       },
       {
         sender: "me",
@@ -289,58 +351,99 @@ export const datesData = [
     id: 1,
     imgUrl: user1,
     name: "Dianna",
+    lastName: "Jones",
     age: 25,
+    city: "New York",
+    country: "USA",
   },
   {
     id: 2,
     imgUrl: user2,
     name: "Jane",
+    lastName: "Smith",
     age: 28,
+    city: "Los Angeles",
+    country: "USA",
   },
   {
     id: 3,
     imgUrl: user3,
-    name: "John",
+    name: "Chiara",
+    lastName: "Doe",
     age: 26,
+    city: "London",
+    country: "UK",
   },
   {
     id: 4,
     imgUrl: user4,
     name: "Ella",
+    lastName: "Williams",
     age: 29,
+    city: "Sydney",
+    country: "Australia",
   },
   {
     id: 5,
     imgUrl: user5,
     name: "Jullie",
+    lastName: "Brown",
     age: 30,
+    city: "Paris",
+    country: "France",
   },
   {
     id: 6,
     imgUrl: user6,
     name: "Olivia",
+    lastName: "Miller",
     age: 27,
+    city: "Berlin",
+    country: "Germany",
   },
   {
     id: 7,
     imgUrl: user7,
     name: "William",
+    lastName: "Wilson",
     age: 31,
+    city: "Toronto",
+    country: "Canada",
   },
   {
     id: 8,
     imgUrl: user8,
     name: "Sophia",
+    lastName: "Moore",
     age: 29,
+    city: "Tokyo",
+    country: "Japan",
   },
-  // Include similar objects for 2 more matches
+  {
+    id: 9,
+    imgUrl: user9,
+    name: "Diana",
+    lastName: "Taylor",
+    age: 32,
+    city: "Mumbai",
+    country: "India",
+  },
+  {
+    id: 10,
+    imgUrl: user4,
+    name: "Alex",
+    lastName: "Anderson",
+    age: 30,
+    city: "Moscow",
+    country: "Russia",
+  },
 ];
 
 export const profileData = [
   {
     name: "Jacob Jones",
     age: 30,
-    imgUrl: user1,
+    imgUrl: profile,
     hobbies: ["Hiking", "Photography", "Cooking"],
     bio: "I'm an adventurous person who loves exploring new places, trying out different cuisines, capturing moments through photography, and spending time in nature. I enjoy hiking on weekends and experimenting with new recipes in the kitchen. Traveling and experiencing different cultures are some of my greatest passions, and I'm always looking for my next adventure.",
   },

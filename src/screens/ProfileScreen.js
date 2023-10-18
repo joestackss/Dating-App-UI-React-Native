@@ -4,11 +4,7 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-import {
-  CameraIcon,
-  ChevronLeftIcon,
-  HeartIcon,
-} from "react-native-heroicons/outline";
+import { CameraIcon } from "react-native-heroicons/outline";
 import { profileData } from "../constant";
 
 export default function ProfileScreen() {
@@ -23,7 +19,7 @@ export default function ProfileScreen() {
       {/* Image */}
       <View>
         <Image
-          source={require("../../assets/images/user1.jpg")}
+          source={data.imgUrl}
           style={{
             width: wp(100),
             height: hp(60),
@@ -35,16 +31,6 @@ export default function ProfileScreen() {
 
       {/* Header */}
       <View className="w-full absolute flex-row justify-end items-center pt-10">
-        {/* <View className="p-2 rounded-full  bg-black/40 ml-5">
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <ChevronLeftIcon
-              size={hp(3.5)}
-              color={"#f64e32"}
-              strokeWidth={1.5}
-            />
-          </TouchableOpacity>
-        </View> */}
-
         <View className="p-2 rounded-full bg-black/40 mr-5 justify-center items-center">
           <CameraIcon size={hp(3.5)} color="white" strokeWidth={1.5} />
         </View>
@@ -56,7 +42,8 @@ export default function ProfileScreen() {
         <View className="flex-row space-x-2 justify-between w-full items-center">
           <View className="flex-row ">
             <Text className="text-black text-center font-bold text-xl">
-              {data.name}{", "}
+              {data.name}
+              {", "}
             </Text>
             <Text className="text-black text-center font-bold text-xl ">
               {data.age}
@@ -96,7 +83,6 @@ export default function ProfileScreen() {
             {data.bio}
           </Text>
         </View>
-
 
         {/*  */}
       </View>

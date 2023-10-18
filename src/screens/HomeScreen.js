@@ -1,27 +1,26 @@
 import { View, Text, Dimensions, TouchableOpacity, Image } from "react-native";
 import React from "react";
-import { useColorScheme } from "nativewind";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Carousal from "react-native-snap-carousel";
 import DatesCard from "../components/DatesCard";
 import { datesData } from "../constant";
 import {
   BellIcon,
-  ChevronLeftIcon,
-  HeartIcon,
 } from "react-native-heroicons/outline";
 import { user1 } from "../../assets/images";
 import { heightPercentageToDP as hp } from "react-native-responsive-screen";
-
+const android = Platform.OS === "android";
 const { width, height } = Dimensions.get("window");
 
 export default function HomeScreen() {
-  const { colorScheme, toggleColorScheme } = useColorScheme();
 
   return (
-    <SafeAreaView className="bg-white">
-      {/* Carousal */}
-
+    <SafeAreaView
+      className="bg-white flex-1 justify-between"
+      style={{
+        paddingTop: android ? hp(2) : 0,
+      }}
+    >
       {/* Header */}
       <View className="w-full flex-row justify-between items-center px-4 mb-8">
         <View className="rounded-full items-center justify-center">
@@ -37,7 +36,9 @@ export default function HomeScreen() {
         </View>
 
         <View>
-          <Text className="text-2xl font-semibold text-center">Dates</Text>
+          <Text className="text-xl font-semibold text-center uppercase">
+            STACKS Dates
+          </Text>
         </View>
 
         {/* Heart Icon */}
@@ -48,22 +49,27 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      <View className="mx-4 mb-4">
-        <Text className="capitalize text-2xl font-semibold">
-          Find your love
-        </Text>
-      </View>
+      {/* Carousal */}
+      <View className=" pb-4">
+        <View className="mx-4 mb-4">
+          <Text className="capitalize text-2xl font-semibold">
+            Find your love
+          </Text>
+        </View>
 
-      <Carousal
-        data={datesData}
-        renderItem={({ item }) => <DatesCard item={item} />}
-        firstItem={1}
-        inactiveSlideScale={0.86}
-        inactiveSlideOpacity={0.6}
-        sliderWidth={width}
-        itemWidth={width * 0.8}
-        slideStyle={{ display: "flex", alignItems: "center" }}
-      />
+        <View className="">
+          <Carousal
+            data={datesData}
+            renderItem={({ item }) => <DatesCard item={item} />}
+            firstItem={1}
+            inactiveSlideScale={0.86}
+            inactiveSlideOpacity={0.6}
+            sliderWidth={width}
+            itemWidth={width * 0.8}
+            slideStyle={{ display: "flex", alignItems: "center" }}
+          />
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
