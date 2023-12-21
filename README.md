@@ -1,6 +1,6 @@
 # Bank-App-UI-React-Native
 
-![Image](https://cdn.dribbble.com/userupload/10466287/file/original-37a3adfe1c04e81625eee1257cbe1b5e.png?resize=1200x675)
+![Image](https://cdn.dribbble.com/userupload/12065697/file/original-6786badca9a32f86fdf8582ef150a6de.png?resize=1504x846)
 
   
   <p align="left">
