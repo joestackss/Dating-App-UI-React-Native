@@ -1,4 +1,4 @@
-# Bank-App-UI-React-Native
+# Dating-App-UI-React-Native
 
 ![Image](https://cdn.dribbble.com/userupload/12065697/file/original-6786badca9a32f86fdf8582ef150a6de.png?resize=1504x846)
 
@@ -6,7 +6,7 @@
   <p align="left">
     <a href="https://www.youtube.com/channel/UCuJNJfjUo2i4c6n09hZTlBQ?sub_confirmation=1"><img alt="Youtube" title="Youtube"  src="https://img.shields.io/badge/-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white"/></a>
     <p>
-      Watch the Tutorial on YouTube <a href="https://www.youtube.com/playlist?list=PLvIpPQPabN8IXudQL3Gmlu6rkaHqmEbmZ" target="_blank">Bank App UI in React Native</a>
+      Watch the Tutorial on YouTube <a href="https://www.youtube.com/playlist?list=PLvIpPQPabN8IXudQL3Gmlu6rkaHqmEbmZ" target="_blank">Dating App UI in React Native</a>
     </p>
     
   </p>
